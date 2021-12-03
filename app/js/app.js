@@ -1,5 +1,7 @@
 
 $(function() {
+    // Custom JS
+    AOS.init();
     $(window).scroll(function(){
         var sticky = $('header.header'),
             scroll = $(window).scrollTop();
@@ -7,7 +9,6 @@ $(function() {
         if (scroll >= 1) sticky.addClass('fixed');
         else sticky.removeClass('fixed');
     });
-	// Custom JS
     $(".slider-main .slider").owlCarousel({
         items: 3,
         loop: true,
@@ -151,7 +152,6 @@ $(function() {
             }
         });
     });
-
     $(".sites-list").hover(function () {
         $(this).toggleClass("mouse");
     });
